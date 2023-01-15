@@ -4,13 +4,14 @@
         { "src": "./index.js", "use": "@vercel/node" }
     ],
     "routes": [
-    {
-        "src": "(.*).js",
-        "dest": "/$1.js"            
-    },
-     {
-        "src": "/.*",
-        "dest": "./public/index.html"
-    }
+        { "src": "/api/auth", "methods": ["POST"], "dest": "/api/aut/new" },
+
+        { "src": "/api/auth", "methods": ["POST"], "dest": "/api/auth" },
+
+        { "src": "/api/auth", "methods": ["GET"], "dest": "/api/auth/renew" }
+       
+
+
+
    ]
 }
