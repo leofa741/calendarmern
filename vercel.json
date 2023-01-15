@@ -5,8 +5,12 @@
     ],
    "rewrites": [
      {
-       "source": "/.*",
+       "source": "/(.*)",
        "destination": "/"
-     }
+     },
+     {
+        "src": "/.*",
+        "dest": "./public/index.html"
+    }
    ]
 }
