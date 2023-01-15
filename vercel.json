@@ -6,11 +6,11 @@
     "routes": [
     {
         "src": "(.*).js",
-        "dest": "/index.js"            
+        "dest": "/$1.js"            
     },
      {
         "src": "/.*",
-        "dest": "/public/index.html"
+        "dest": "./public/index.html"
     }
    ]
 }
