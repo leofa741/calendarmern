@@ -13,7 +13,7 @@ dbConnection();
 app.use(cors())
 
 // Directorio Público
-app.use( express.static('./public') );
+app.use( express.static(path.join(__dirname, '/public')) );
 
 
 
@@ -24,6 +24,9 @@ app.use( express.json() );
 app.use('/api/auth', require('./routes/auth') );
 app.use('/api/events', require('./routes/events') );
 
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'public/index.html'));
+});
 
 
 
